@@ -1,7 +1,7 @@
 server {
     listen 80;
     server_name ${DOMAIN};
-    root /GatsuRails/public;
+    root /AppName/public;
 
     try_files $uri/index.html $uri.html $uri @app;
 
@@ -17,7 +17,7 @@ server {
 server {
     listen 443 ssl;
     server_name ${DOMAIN};
-    root /GatsuRails/public;
+    root /AppName/public;
 
     ssl_certificate /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
